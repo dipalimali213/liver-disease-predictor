@@ -1,84 +1,92 @@
-# 🧠 Liver Disease Prediction using Machine Learning
+# Liver Disease Prediction using Machine Learning
 
 ## 📌 Project Abstract
 
-"A Comparative Analysis of Machine Learning Algorithms for Early
-Prediction of Liver Disease"
+**"A Comparative Analysis of Machine Learning Algorithms for Early Prediction of Liver Disease"**
 
-By\
-1. Sonawane Harshada Ravindra (221106021, 23)\
-2. Mali Dipali Vilas (221106055, 55)\
-3. Narkhede Sanjana Nitin (231206003, 64)
+**By**  
+1. Sonawane Harshada Ravindra (221106021, 23)  
+2. Mali Dipali Vilas (221106055, 55)  
+3. Narkhede Sanjana Nitin (231206003, 64)  
 
-Under the Guidance of\
-Prof. Dr. P. S. Sanjekar
+**Under the Guidance of**  
+Prof. Dr. P. S. Sanjekar  
 
-This project presents a comparative study of machine learning algorithms
-to predict liver disease at an early stage using clinical data. The
-system analyzes various health parameters and helps in identifying
-potential liver disease risk.
+This project presents a comparative analysis of multiple machine learning algorithms to enable early prediction of liver disease using clinical data. The system processes various medical attributes and identifies patterns associated with liver disorders, helping in early diagnosis and decision support.
 
-------------------------------------------------------------------------
+---
 
 ## 📌 Project Overview
 
-The aim of this project is to build a machine learning model that
-predicts liver disease based on patient medical attributes.
+Liver disease is a critical health issue that often goes undetected in early stages. This project aims to build a **predictive machine learning model** that can classify whether a patient is likely to have liver disease based on diagnostic parameters.
 
-The model uses clinical features such as: - Age\
-- Gender\
-- Bilirubin levels\
-- Liver enzyme levels\
-- Protein levels
+The system is trained on real-world patient data and focuses on improving prediction accuracy through preprocessing, feature engineering, and handling class imbalance.
 
-------------------------------------------------------------------------
+### 🔍 Input Features
+- Age  
+- Gender  
+- Total Bilirubin  
+- Direct Bilirubin  
+- Alkaline Phosphotase  
+- ALT (Alanine Aminotransferase)  
+- AST (Aspartate Aminotransferase)  
+- Total Proteins  
+- Albumin  
+- Albumin/Globulin Ratio  
 
-## ⚙️ Working (Up to Model)
+---
 
-1.  Data Collection\
+## ⚙️ Methodology (Working up to Model)
 
--   Dataset containing liver patient records
+### 1. Data Collection
+- Liver disease dataset containing patient medical records  
+- Includes both diseased and non-diseased cases  
 
-2.  Data Preprocessing\
+### 2. Data Preprocessing
+- Handling missing or inconsistent values  
+- Encoding categorical variables (e.g., Gender)  
+- Feature scaling using **StandardScaler**  
 
--   Handling missing values\
--   Encoding categorical variables\
--   Feature scaling using StandardScaler
+### 3. Handling Imbalanced Data
+- Dataset had class imbalance  
+- Applied **SMOTETomek** to:
+  - Oversample minority class  
+  - Remove noisy samples  
 
-3.  Handling Imbalanced Data\
+### 4. Model Training
+Multiple algorithms were implemented for comparison:
+- Random Forest Classifier  
+- Logistic Regression  
+- Decision Tree  
 
--   Applied SMOTETomek technique
+### 5. Model Evaluation
+Models were evaluated using:
+- Accuracy  
+- ROC-AUC Score  
+- Confusion Matrix  
 
-4.  Model Training\
+### 6. Model Selection
+- Random Forest provided the best performance  
+- Selected as final model  
 
--   Random Forest\
--   Logistic Regression\
--   Decision Tree
+### 7. Model Saving
+- Trained model saved as:
+  - `liver_model_tuned.pkl`  
+  - `liver_scaler.pkl`  
 
-5.  Model Evaluation\
-
--   Accuracy\
--   ROC-AUC Score
-
-6.  Model Selection\
-
--   Best model selected based on performance
-
-7.  Model Saving\
-
--   liver_model_tuned.pkl\
--   liver_scaler.pkl
-
-------------------------------------------------------------------------
+---
 
 ## 🧪 Machine Learning Details
 
--   Algorithm: Random Forest Classifier\
--   Class Imbalance Handling: SMOTETomek\
--   Feature Scaling: StandardScaler
+- **Final Algorithm:** Random Forest Classifier  
+- **Class Imbalance Technique:** SMOTETomek  
+- **Feature Scaling:** StandardScaler  
 
-Performance: - Accuracy: \~87%\
-- ROC-AUC Score: \~0.94
+### 📊 Performance Metrics
+- Accuracy: ~87%  
+- ROC-AUC Score: ~0.94  
+
+---
 
 ------------------------------------------------------------------------
 
